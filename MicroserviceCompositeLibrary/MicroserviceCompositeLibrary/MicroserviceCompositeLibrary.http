@@ -1,6 +1,0 @@
-@MicroserviceCompositeLibrary_HostAddress = http://localhost:5252
-
-GET {{MicroserviceCompositeLibrary_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
