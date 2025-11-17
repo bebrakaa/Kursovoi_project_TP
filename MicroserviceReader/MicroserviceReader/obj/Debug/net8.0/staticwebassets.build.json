@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "mwOBkeToQGeHS5jeMWekILc3cy1vhb61b1rokt5onvw=",
+  "Source": "MicroserviceReader",
+  "BasePath": "_content/MicroserviceReader",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

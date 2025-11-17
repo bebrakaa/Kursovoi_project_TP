@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "E4T1PzYDpNj4vfc1xw+dPaqZIqCL1ImIyyN+lT5UFkg=",
+  "Source": "MicroserviceCompositeLibrary",
+  "BasePath": "_content/MicroserviceCompositeLibrary",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
