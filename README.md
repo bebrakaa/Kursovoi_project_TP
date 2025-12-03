@@ -66,28 +66,28 @@ InsuranceAgency/
 
 1. Клонируйте репозиторий:
 
-```bash
+```
 git clone <repository-url>
 cd Kursovik_TP
 ```
 
 2. Восстановите зависимости:
 
-```bash
+```
 dotnet restore
 ```
 
 3. Примените миграции базы данных:
 
-```bash
+```
 cd src/InsuranceAgency.Infrastructure
 dotnet ef migrations add InitialCreate --startup-project ../InsuranceAgency.Web
 dotnet ef database update --startup-project ../InsuranceAgency.Web
 ```
 
-4. Запустите Web API:
+4. Запустите Web API (просмотр и взаимоджействие страничек в браузере):
 
-```bash
+```
 cd корневая папка
 dotnet run --project src/InsuranceAgency.Web/InsuranceAgency.Web.csproj
 ```
@@ -99,16 +99,18 @@ http://localhost:.../swagger
 hhtp://localhost:.../home
 ```
 
-### Запуск Worker (фоновые задачи)
+### Запуск Worker (фоновые задачи - проверка проблемных договоров)
 
-```bash
+```
+в корневой папке
 cd src/InsuranceAgency.Worker
 dotnet run
 ```
 
 ### Запуск тестов
 
-```bash
+```
+в корневой папке
 dotnet test src/InsuranceAgency.Tests/InsuranceAgency.Tests.csproj
 ```
 
