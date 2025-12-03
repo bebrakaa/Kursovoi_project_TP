@@ -1,0 +1,925 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\ForVLGU\\Kursovik_TP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\services\\contractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\services\\contractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\services\\icontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\services\\icontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\dtos\\contract\\contractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\dtos\\contract\\contractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\common\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\common\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\entities\\systemprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\entities\\systemprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\dtos\\contract\\createcontractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\dtos\\contract\\createcontractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\common\\validation\\registercontractdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\common\\validation\\registercontractdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\common\\validation\\createcontractdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\common\\validation\\createcontractdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\repositories\\iagentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\repositories\\iagentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\dtos\\contract\\registercontractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\dtos\\contract\\registercontractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\external\\paymentgateway\\mockpaymentgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\external\\paymentgateway\\mockpaymentgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\valueobjects\\daterange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\valueobjects\\daterange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\valueobjects\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\valueobjects\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\enums\\contractstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\enums\\contractstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\entities\\insuranceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\entities\\insuranceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\entities\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\entities\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\repositories\\contractrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\repositories\\contractrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\repositories\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\repositories\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\repositories\\insuranceservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\repositories\\insuranceservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\repositories\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\repositories\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\persistence\\configurations\\paymentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\persistence\\configurations\\paymentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\persistence\\configurations\\contractconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\persistence\\configurations\\contractconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\persistence\\configurations\\insuranceserviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\persistence\\configurations\\insuranceserviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\persistence\\configurations\\clientconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\persistence\\configurations\\clientconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\persistence\\configurations\\agentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\persistence\\configurations\\agentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.infrastructure\\insuranceagency.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E366CF5C-27FC-46AC-813F-DF198BFAC8E7}|src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj|solutionrelative:src\\insuranceagency.infrastructure\\insuranceagency.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\repositories\\icontractrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\repositories\\icontractrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\external\\ipaymentgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\external\\ipaymentgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\services\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\services\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\repositories\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\repositories\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\repositories\\iinsuranceservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\repositories\\iinsuranceservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\interfaces\\repositories\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\interfaces\\repositories\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\dtos\\payment\\paymentresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\dtos\\payment\\paymentresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\dtos\\payment\\initiatepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\dtos\\payment\\initiatepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\dtos\\client\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\dtos\\client\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\dtos\\contract\\contractsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\dtos\\contract\\contractsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\dtos\\contract\\contractdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\dtos\\contract\\contractdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\common\\pagedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\common\\pagedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.application\\common\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3F1D04-7A15-4AA8-8047-A0A45722CA57}|src\\InsuranceAgency.Application\\InsuranceAgency.Application.csproj|solutionrelative:src\\insuranceagency.application\\common\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|e:\\forvlgu\\kursovik_tp\\src\\insuranceagency.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104A9599-59F0-4E8C-8907-10E9D560415B}|src\\InsuranceAgency.Domain\\InsuranceAgency.Domain.csproj|solutionrelative:src\\insuranceagency.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Common\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Common\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T04:31:09.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContractDto.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractDto.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractDto.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractDto.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T04:21:53.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IContractService.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Services\\IContractService.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\Services\\IContractService.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Services\\IContractService.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\Services\\IContractService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:04:28.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ContractService.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Services\\ContractService.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Services\\ContractService.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Services\\ContractService.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Services\\ContractService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowBoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:06:30.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateContractDtoValidator.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\Validation\\CreateContractDtoValidator.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Common\\Validation\\CreateContractDtoValidator.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\Validation\\CreateContractDtoValidator.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Common\\Validation\\CreateContractDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:09:39.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterContractDtoValidator.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\Validation\\RegisterContractDtoValidator.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Common\\Validation\\RegisterContractDtoValidator.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\Validation\\RegisterContractDtoValidator.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Common\\Validation\\RegisterContractDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:09:56.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateContractDto.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\CreateContractDto.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\DTOs\\Contract\\CreateContractDto.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\CreateContractDto.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\DTOs\\Contract\\CreateContractDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:59:46.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SystemProcess.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\SystemProcess.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Entities\\SystemProcess.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\SystemProcess.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Entities\\SystemProcess.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA6wBkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:16:27.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Notification.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Entities\\Notification.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Notification.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Entities\\Notification.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIA7wCAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:16:16.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Payment.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Entities\\Payment.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Payment.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Entities\\Payment.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAQwFQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:15:06.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Contract.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Contract.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Entities\\Contract.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Contract.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Entities\\Contract.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAgwJwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:14:36.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAgentRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IAgentRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IAgentRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IAgentRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IAgentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T04:22:49.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MockPaymentGateway.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\External\\PaymentGateway\\MockPaymentGateway.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\External\\PaymentGateway\\MockPaymentGateway.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\External\\PaymentGateway\\MockPaymentGateway.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\External\\PaymentGateway\\MockPaymentGateway.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:58:39.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ValidationException.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Exceptions\\ValidationException.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Exceptions\\ValidationException.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Exceptions\\ValidationException.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Exceptions\\ValidationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:18:59.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DomainException.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Exceptions\\DomainException.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Exceptions\\DomainException.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Exceptions\\DomainException.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Exceptions\\DomainException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:18:47.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DateRange.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\ValueObjects\\DateRange.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\ValueObjects\\DateRange.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\ValueObjects\\DateRange.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\ValueObjects\\DateRange.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:18:34.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Money.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\ValueObjects\\Money.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\ValueObjects\\Money.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\ValueObjects\\Money.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\ValueObjects\\Money.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAcwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:18:17.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Enums\\UserRole.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Enums\\UserRole.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:17:39.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegisterContractDto.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\RegisterContractDto.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\DTOs\\Contract\\RegisterContractDto.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\RegisterContractDto.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\DTOs\\Contract\\RegisterContractDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:00:00.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Enums\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Enums\\PaymentStatus.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Enums\\PaymentStatus.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Enums\\PaymentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:17:27.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ContractStatus.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Enums\\ContractStatus.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Enums\\ContractStatus.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Enums\\ContractStatus.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Enums\\ContractStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:17:14.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "InsuranceService.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\InsuranceService.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Entities\\InsuranceService.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\InsuranceService.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Entities\\InsuranceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:16:03.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Agent.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Agent.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Entities\\Agent.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Agent.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Entities\\Agent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:15:37.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Client.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Client.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Entities\\Client.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\Client.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Entities\\Client.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:15:24.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ContractRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Repositories\\ContractRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Repositories\\ContractRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Repositories\\ContractRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Repositories\\ContractRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:57:15.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PaymentRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Repositories\\PaymentRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Repositories\\PaymentRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Repositories\\PaymentRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Repositories\\PaymentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T04:00:17.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "InsuranceServiceRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Repositories\\InsuranceServiceRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Repositories\\InsuranceServiceRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Repositories\\InsuranceServiceRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Repositories\\InsuranceServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:59:53.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ClientRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Repositories\\ClientRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Repositories\\ClientRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Repositories\\ClientRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Repositories\\ClientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:59:37.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PaymentConfiguration.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\PaymentConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\PaymentConfiguration.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\PaymentConfiguration.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\PaymentConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:56:44.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ContractConfiguration.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\ContractConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\ContractConfiguration.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\ContractConfiguration.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\ContractConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:56:27.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "InsuranceServiceConfiguration.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\InsuranceServiceConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\InsuranceServiceConfiguration.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\InsuranceServiceConfiguration.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\InsuranceServiceConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:56:06.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ClientConfiguration.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\ClientConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\ClientConfiguration.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\ClientConfiguration.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\ClientConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:55:47.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AgentConfiguration.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\AgentConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\AgentConfiguration.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\AgentConfiguration.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Persistence\\Configurations\\AgentConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:55:27.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T03:54:51.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "InsuranceAgency.Infrastructure",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj",
+              "RelativeToolTip": "src\\InsuranceAgency.Infrastructure\\InsuranceAgency.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-02T03:53:22.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:08:00.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Services\\NotificationService.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Services\\NotificationService.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:07:14.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Services\\PaymentService.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Services\\PaymentService.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Services\\PaymentService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:06:56.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IPaymentGateway.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\External\\IPaymentGateway.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\External\\IPaymentGateway.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\External\\IPaymentGateway.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\External\\IPaymentGateway.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:05:32.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Services\\INotificationService.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\Services\\INotificationService.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Services\\INotificationService.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\Services\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:05:01.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Services\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\Services\\IPaymentService.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Services\\IPaymentService.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\Services\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:04:44.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IContractRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IContractRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IContractRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IContractRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IContractRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:02:56.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IPaymentRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IPaymentRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IPaymentRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IPaymentRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IPaymentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:04:02.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "IInsuranceServiceRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IInsuranceServiceRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IInsuranceServiceRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IInsuranceServiceRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IInsuranceServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:03:30.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "IClientRepository.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IClientRepository.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IClientRepository.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IClientRepository.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Interfaces\\Repositories\\IClientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:03:13.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "PaymentResultDto.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Payment\\PaymentResultDto.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\DTOs\\Payment\\PaymentResultDto.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Payment\\PaymentResultDto.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\DTOs\\Payment\\PaymentResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:01:41.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "InitiatePaymentDto.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Payment\\InitiatePaymentDto.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\DTOs\\Payment\\InitiatePaymentDto.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Payment\\InitiatePaymentDto.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\DTOs\\Payment\\InitiatePaymentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:01:24.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ClientDto.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Client\\ClientDto.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\DTOs\\Client\\ClientDto.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Client\\ClientDto.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\DTOs\\Client\\ClientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:01:06.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ContractSummaryDto.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractSummaryDto.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractSummaryDto.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractSummaryDto.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractSummaryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:00:36.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ContractDetailsDto.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractDetailsDto.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractDetailsDto.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractDetailsDto.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\DTOs\\Contract\\ContractDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:00:18.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "PagedList.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\PagedList.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Common\\PagedList.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\PagedList.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Common\\PagedList.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:54:18.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Result.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\Result.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Application\\Common\\Result.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application\\Common\\Result.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Application\\Common\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:54:02.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "src\\InsuranceAgency.Domain\\Entities\\User.cs",
+              "ToolTip": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "src\\InsuranceAgency.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:15:50.571Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
