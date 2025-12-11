@@ -1,0 +1,7 @@
+{
+  "InsuranceAgency.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Application",
+  "InsuranceAgency.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Domain",
+  "InsuranceAgency.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Infrastructure",
+  "InsuranceAgency.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Web",
+  "InsuranceAgency.Worker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\ForVLGU\\Kursovik_TP\\src\\InsuranceAgency.Worker"
+}
