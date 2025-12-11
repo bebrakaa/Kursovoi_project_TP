@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Регистрация";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="dashboard-section">
+            <h2 class="mb-3">Создать аккаунт</h2>
+            <p class="text-muted">Выберите роль и заполните контактные данные. В любой момент можно изменить email в личном кабинете.</p>
+
+            <form method="post" class="mt-4">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+                <div class="mb-3">
+                    <label for="username" class="form-label">Логин</label>
+                    <input type="text" class="form-control" id="username" name="username" required />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="password" name="password" required />
+                </div>
+                <div class="mb-3">
+                    <label for="role" class="form-label">Роль</label>
+                    <select id="role" name="role" class="form-select">
+                        <option value="Client" selected>Клиент</option>
+                        <option value="Agent">Агент</option>
+                        <option value="Administrator">Администратор</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
