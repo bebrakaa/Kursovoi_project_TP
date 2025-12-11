@@ -1,0 +1,174 @@
+@{
+    ViewData["Title"] = "Верификация документов";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var client = ViewBag.Client as InsuranceAgency.Domain.Entities.Client;
+    var verifications = ViewBag.Verifications as IEnumerable<InsuranceAgency.Domain.Entities.DocumentVerification>;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2>🔍 Верификация документов: @client?.FullName</h2>
+        <p class="text-muted mb-0">Проверка и подтверждение документов клиента. Создание новых верификаций и управление статусами</p>
+    </div>
+    <a href="@Url.Action("ClientHistory", "Agent", new { clientId = client?.Id })" class="btn btn-outline-secondary">← Назад</a>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-12">
+        <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-0">Личные данные клиента</h5>
+                    <small class="text-muted">Обязательные к верификации: ФИО и Паспорт</small>
+                </div>
+                <span class="badge bg-warning text-dark">Проверьте соответствие данным из ЛК</span>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>ФИО:</strong>
+                        <div>@(string.IsNullOrWhiteSpace(client?.FullName) ? "-" : client.FullName)</div>
+                    </div>
+                    <div class="col-md-3">
+                        <strong>Email:</strong>
+                        <div>@(string.IsNullOrWhiteSpace(client?.Email) ? "-" : client.Email)</div>
+                    </div>
+                    <div class="col-md-3">
+                        <strong>Телефон:</strong>
+                        <div>@(string.IsNullOrWhiteSpace(client?.Phone) ? "-" : client.Phone)</div>
+                    </div>
+                    <div class="col-md-3">
+                        <strong>Паспорт:</strong>
+                        <div>@(string.IsNullOrWhiteSpace(client?.Passport) ? "-" : client.Passport)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Новая верификация</h5>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-action="VerifyDocuments" asp-controller="Agent" asp-route-clientId="@client?.Id" asp-antiforgery="true">
+                    <div class="mb-3">
+                        <label class="form-label">Тип данных <span class="text-danger">*</span></label>
+                        <select name="documentType" class="form-select" required>
+                            <option value="">Выберите тип документа</option>
+                            <option value="FullName">ФИО (обязательное)</option>
+                            <option value="Passport">Паспорт (обязательное)</option>
+                            <option value="Phone">Телефон</option>
+                            <option value="Email">Email</option>
+                            <option value="Other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Значение данных <span class="text-danger">*</span></label>
+                        <input type="text" name="documentNumber" class="form-control" required maxlength="100" placeholder="Например: паспорт 1234 567890 или номер телефона" />
+                        <small class="text-muted"> Укажите полное значение как в профиле клиента.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Примечания</label>
+                        <textarea name="notes" class="form-control" rows="3" maxlength="500" placeholder="Дополнительная информация о документе..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">✅ Создать верификацию</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>История верификаций</h5>
+            </div>
+            <div class="card-body">
+                @if (verifications != null && verifications.Any())
+                {
+                    <div class="list-group">
+                        @foreach (var verification in verifications)
+                        {
+                            <div class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <h6 class="mb-1">
+                                            @(verification.DocumentType ?? "Не указан")
+                                            @if (verification.VerifiedByAgentId == null)
+                                            {
+                                                <span class="badge bg-info ms-2">Заявка от клиента</span>
+                                            }
+                                        </h6>
+                                        <p class="mb-1">@(verification.DocumentNumber ?? "-")</p>
+                                        @if (!string.IsNullOrWhiteSpace(verification.Notes))
+                                        {
+                                            <p class="mb-1 small text-muted">@verification.Notes</p>
+                                        }
+                                        <small>Создано: @verification.CreatedAt.ToString("dd.MM.yyyy HH:mm")</small>
+                                        @if (verification.Status != InsuranceAgency.Domain.Enums.VerificationStatus.Pending)
+                                        {
+                                            <br><small>Верифицировано: @verification.VerifiedAt.ToString("dd.MM.yyyy HH:mm")</small>
+                                        }
+                                    </div>
+                                    <div>
+                                        @if (verification.Status == InsuranceAgency.Domain.Enums.VerificationStatus.Pending)
+                                        {
+                                            <form method="post" asp-action="ApproveVerification" asp-controller="Agent" asp-route-id="@verification.Id" asp-antiforgery="true" class="d-inline">
+                                                <button type="submit" class="btn btn-sm btn-success me-1" title="Одобрить верификацию">
+                                                    ✅ Одобрить
+                                                </button>
+                                            </form>
+                                            <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#rejectVerificationModal@(verification.Id)" title="Отклонить верификацию">
+                                                ❌ Отклонить
+                                            </button>
+                                            
+                                            <!-- Modal для отклонения верификации -->
+                                            <div class="modal fade" id="rejectVerificationModal@(verification.Id)" tabindex="-1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Отклонить верификацию</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <form method="post" asp-action="RejectVerification" asp-controller="Agent" asp-route-id="@verification.Id" asp-antiforgery="true">
+                                                            <div class="modal-body">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Причина отклонения <span class="text-danger">*</span></label>
+                                                                    <textarea name="reason" class="form-control" rows="3" required placeholder="Укажите причину отклонения верификации..."></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                                                                <button type="submit" class="btn btn-danger">Отклонить верификацию</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                        else if (verification.Status == InsuranceAgency.Domain.Enums.VerificationStatus.Approved)
+                                        {
+                                            <span class="badge bg-success">Одобрено</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">Отклонено</span>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted">Верификаций пока нет</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

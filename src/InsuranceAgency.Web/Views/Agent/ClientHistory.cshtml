@@ -1,0 +1,158 @@
+@{
+    ViewData["Title"] = "История операций клиента";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var client = ViewBag.Client as InsuranceAgency.Domain.Entities.Client;
+    var contracts = ViewBag.Contracts as IEnumerable<InsuranceAgency.Domain.Entities.Contract>;
+    var verifications = ViewBag.Verifications as IEnumerable<InsuranceAgency.Domain.Entities.DocumentVerification>;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2>📊 История операций: @client?.FullName</h2>
+        <p class="text-muted mb-0">Просмотр всех операций клиента: договоры, платежи, верификация документов</p>
+    </div>
+    <a href="@Url.Action("Clients", "Agent")" class="btn btn-outline-secondary">← Назад к списку</a>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Информация о клиенте</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">ФИО:</dt>
+                    <dd class="col-sm-8">@client?.FullName</dd>
+                    <dt class="col-sm-4">Email:</dt>
+                    <dd class="col-sm-8">@client?.Email</dd>
+                    <dt class="col-sm-4">Телефон:</dt>
+                    <dd class="col-sm-8">@(client?.Phone ?? "-")</dd>
+                    <dt class="col-sm-4">Паспорт:</dt>
+                    <dd class="col-sm-8">@(client?.Passport ?? "-")</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Действия</h5>
+            </div>
+            <div class="card-body">
+                <a href="@Url.Action("VerifyDocuments", "Agent", new { clientId = client?.Id })" class="btn btn-primary w-100 mb-2">Верифицировать документы</a>
+                <a href="@Url.Action("EditClient", "Agent", new { id = client?.Id })" class="btn btn-warning w-100 mb-2">Редактировать клиента</a>
+                <a href="@Url.Action("Clients", "Agent")" class="btn btn-secondary w-100">Назад к списку</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h5>Договоры клиента</h5>
+    </div>
+    <div class="card-body">
+        @if (contracts != null && contracts.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Номер</th>
+                            <th>Услуга</th>
+                            <th>Период</th>
+                            <th>Премия</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var contract in contracts)
+                        {
+                            <tr>
+                                <td>@(contract.Number ?? "Не присвоен")</td>
+                                <td>@(contract.Service?.Name ?? "N/A")</td>
+                                <td>@contract.StartDate.ToString("dd.MM.yyyy") - @contract.EndDate.ToString("dd.MM.yyyy")</td>
+                                <td>@contract.Premium.Amount @contract.Premium.Currency</td>
+                                @{
+                                    var statusText = contract.Status switch
+                                    {
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Draft => "Черновик",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Registered => "Зарегистрирован",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.PendingPayment => "Ожидание оплаты",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Paid => "Оплачен",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Active => "Активен",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Overdue => "Просрочен",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Suspended => "Приостановлен",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Cancelled => "Отменён",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Problematic => "Проблемный",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Expired => "Истёк срок",
+                                        InsuranceAgency.Domain.Enums.ContractStatus.Completed => "Завершён",
+                                        _ => "Неизвестно"
+                                    };
+                                }
+                                <td><span class="badge bg-secondary">@statusText</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p class="text-muted">У клиента пока нет договоров</p>
+        }
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Верификация документов</h5>
+    </div>
+    <div class="card-body">
+        @if (verifications != null && verifications.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Тип документа</th>
+                            <th>Номер</th>
+                            <th>Статус</th>
+                            <th>Дата проверки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var verification in verifications)
+                        {
+                            <tr>
+                                <td>@(verification.DocumentType ?? "-")</td>
+                                <td>@(verification.DocumentNumber ?? "-")</td>
+                                <td>
+                                    @if (verification.Status == InsuranceAgency.Domain.Enums.VerificationStatus.Approved)
+                                    {
+                                        <span class="badge bg-success">Одобрено</span>
+                                    }
+                                    else if (verification.Status == InsuranceAgency.Domain.Enums.VerificationStatus.Rejected)
+                                    {
+                                        <span class="badge bg-danger">Отклонено</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning">Ожидает</span>
+                                    }
+                                </td>
+                                <td>@verification.VerifiedAt.ToString("dd.MM.yyyy HH:mm")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p class="text-muted">Верификация документов не проводилась</p>
+        }
+    </div>
+</div>
+
