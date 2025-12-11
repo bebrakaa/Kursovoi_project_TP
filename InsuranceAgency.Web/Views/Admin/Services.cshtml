@@ -1,0 +1,169 @@
+@model IEnumerable<InsuranceAgency.Domain.Entities.InsuranceService>
+@{
+    ViewData["Title"] = "Справочник услуг страхования";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2>Справочник услуг страхования</h2>
+    </div>
+    <div>
+        <a href="@Url.Action("Index", "Dashboard")" class="btn btn-outline-secondary me-2">← Назад в кабинет</a>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary">🏠 На главную</a>
+    </div>
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <p class="text-muted mb-0">Управление страховыми продуктами и услугами. Здесь вы можете добавлять, редактировать и удалять услуги страхования.</p>
+    </div>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addServiceModal">
+        <span>➕</span> Добавить услугу
+    </button>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Название услуги</th>
+                    <th>Описание</th>
+                    <th>Премия по умолчанию</th>
+                    <th class="text-center">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var service in Model)
+                {
+                    <tr>
+                        <td><strong>@service.Name</strong></td>
+                        <td>@(string.IsNullOrWhiteSpace(service.Description) ? "<span class='text-muted'>Описание отсутствует</span>" : service.Description)</td>
+                        <td><span class="badge bg-success">@service.DefaultPremium.Amount.ToString("N2") @service.DefaultPremium.Currency</span></td>
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-warning me-1" data-bs-toggle="modal" data-bs-target="#editServiceModal@(service.Id)" title="Редактировать">
+                                ✏️ Редактировать
+                            </button>
+                            <form method="post" asp-action="DeleteService" asp-controller="Admin" asp-route-id="@service.Id" asp-antiforgery="true" class="d-inline" onsubmit="return confirm('Вы уверены, что хотите удалить услугу? Это действие нельзя отменить.');">
+                                <button type="submit" class="btn btn-sm btn-danger" title="Удалить">
+                                    🗑️ Удалить
+                                </button>
+                            </form>
+                        
+                        <!-- Modal для редактирования -->
+                        <div class="modal fade" id="editServiceModal@(service.Id)" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Редактировать услугу</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <form method="post" asp-action="UpdateService" asp-controller="Admin" asp-route-id="@service.Id">
+                                        @Html.AntiForgeryToken()
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label class="form-label">Название услуги <span class="text-danger">*</span></label>
+                                                <input type="text" name="Name" class="form-control" value="@service.Name" required maxlength="200" />
+                                                <small class="form-text text-muted">Название должно быть уникальным и понятным для клиентов</small>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Описание</label>
+                                                <textarea name="Description" class="form-control" rows="3" maxlength="1000">@(service.Description ?? "")</textarea>
+                                                <small class="form-text text-muted">Опишите условия и особенности данной услуги</small>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Премия по умолчанию (RUB) <span class="text-danger">*</span></label>
+                                                <input type="number" name="DefaultPremium" class="form-control" step="0.01" min="0.01" value="@service.DefaultPremium.Amount" required />
+                                                <small class="form-text text-muted">Минимальная сумма: 0.01 RUB</small>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                                            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info">
+        <h5>📋 Список услуг пуст</h5>
+        <p class="mb-0">Начните с добавления первой страховой услуги. Нажмите кнопку "Добавить услугу" выше.</p>
+    </div>
+}
+
+<!-- Modal для добавления услуги -->
+<div class="modal fade" id="addServiceModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Добавить услугу</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" asp-action="CreateService" asp-controller="Admin" id="createServiceForm">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Название услуги <span class="text-danger">*</span></label>
+                        <input type="text" name="Name" class="form-control" required maxlength="200" placeholder="Например: Страхование автомобиля" />
+                        <small class="form-text text-muted">Название должно быть уникальным и понятным для клиентов</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Описание</label>
+                        <textarea name="Description" class="form-control" rows="3" maxlength="1000" placeholder="Подробное описание услуги страхования..."></textarea>
+                        <small class="form-text text-muted">Опишите условия и особенности данной услуги</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Премия по умолчанию (RUB) <span class="text-danger">*</span></label>
+                        <input type="number" name="DefaultPremium" class="form-control" step="0.01" min="0.01" required placeholder="1000.00" />
+                        <small class="form-text text-muted">Минимальная сумма: 0.01 RUB</small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn btn-primary">Добавить услугу</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        // Валидация формы добавления услуги
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('createServiceForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    const name = form.querySelector('input[name="Name"]').value.trim();
+                    const premium = parseFloat(form.querySelector('input[name="DefaultPremium"]').value);
+                    
+                    if (!name) {
+                        e.preventDefault();
+                        alert('Название услуги обязательно для заполнения');
+                        return false;
+                    }
+                    
+                    if (!premium || premium <= 0) {
+                        e.preventDefault();
+                        alert('Премия должна быть больше 0');
+                        return false;
+                    }
+                });
+            }
+        });
+    </script>
+}
+

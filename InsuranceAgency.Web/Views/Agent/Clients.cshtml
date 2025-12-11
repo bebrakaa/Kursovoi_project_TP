@@ -1,0 +1,83 @@
+@model IEnumerable<InsuranceAgency.Domain.Entities.Client>
+@{
+    ViewData["Title"] = "Справочник клиентов";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2>📋 Справочник клиентов</h2>
+        <p class="text-muted mb-0">Управление базой клиентов: добавление, редактирование, просмотр истории операций и верификация документов</p>
+    </div>
+    <div>
+        <a href="@Url.Action("Index", "Dashboard")" class="btn btn-outline-secondary me-2">← Назад в кабинет</a>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary">🏠 На главную</a>
+    </div>
+    <div>
+        <a href="@Url.Action("AddClient", "Agent")" class="btn btn-success me-2">
+            <span>➕</span> Добавить клиента
+        </a>
+        <a href="@Url.Action("CreateContract", "Agent")" class="btn btn-primary">
+            <span>📄</span> Создать договор
+        </a>
+    </div>
+</div>
+
+<div class="mb-3">
+    <form method="get" class="d-flex">
+        <input type="text" name="search" class="form-control me-2" placeholder="Поиск по имени, email или телефону..." value="@ViewBag.Search" />
+        <button type="submit" class="btn btn-outline-primary">Поиск</button>
+    </form>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ФИО клиента</th>
+                    <th>Email</th>
+                    <th>Телефон</th>
+                    <th>Паспорт</th>
+                    <th class="text-center">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var client in Model)
+                {
+                    <tr>
+                        <td><strong>@client.FullName</strong></td>
+                        <td>@client.Email</td>
+                        <td>@(string.IsNullOrWhiteSpace(client.Phone) ? "<span class='text-muted'>Не указан</span>" : client.Phone)</td>
+                        <td>@(string.IsNullOrWhiteSpace(client.Passport) ? "<span class='text-muted'>Не указан</span>" : client.Passport)</td>
+                        <td class="text-center">
+                            <a href="@Url.Action("ClientHistory", "Agent", new { clientId = client.Id })" class="btn btn-sm btn-info me-1" title="Просмотр истории операций">
+                                📊 История
+                            </a>
+                            <a href="@Url.Action("VerifyDocuments", "Agent", new { clientId = client.Id })" class="btn btn-sm btn-primary me-1" title="Верифицировать документы клиента">
+                                ✅ Верифицировать
+                            </a>
+                            <a href="@Url.Action("EditClient", "Agent", new { id = client.Id })" class="btn btn-sm btn-warning me-1" title="Редактировать данные клиента">
+                                ✏️ Редактировать
+                            </a>
+                            <form method="post" asp-action="DeleteClient" asp-controller="Agent" asp-route-id="@client.Id" asp-antiforgery="true" class="d-inline" onsubmit="return confirm('Вы уверены, что хотите удалить клиента? Это действие нельзя отменить.');">
+                                <button type="submit" class="btn btn-sm btn-danger" title="Удалить клиента">
+                                    🗑️ Удалить
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info">
+        <h5>📋 Список клиентов пуст</h5>
+        <p class="mb-0">Начните с добавления первого клиента. Нажмите кнопку "Добавить клиента" выше.</p>
+    </div>
+}
+

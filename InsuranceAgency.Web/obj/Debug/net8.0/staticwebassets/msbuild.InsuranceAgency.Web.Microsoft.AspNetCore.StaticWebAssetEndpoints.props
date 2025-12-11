@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/InsuranceAgency.Web/css/site.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XbqlCIPELUflhkZ0WtNAWT7YnbDr2Vk8d\u002B/gvC0PDC4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1082"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022XbqlCIPELUflhkZ0WtNAWT7YnbDr2Vk8d\u002B/gvC0PDC4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 02 Dec 2025 10:23:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/InsuranceAgency.Web/css/site.n7hufdh3vo.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"n7hufdh3vo"},{"Name":"integrity","Value":"sha256-XbqlCIPELUflhkZ0WtNAWT7YnbDr2Vk8d\u002B/gvC0PDC4="},{"Name":"label","Value":"_content/InsuranceAgency.Web/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1082"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022XbqlCIPELUflhkZ0WtNAWT7YnbDr2Vk8d\u002B/gvC0PDC4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 02 Dec 2025 10:23:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,185 @@
+@{
+    ViewData["Title"] = "История операций";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var contracts = ViewBag.Contracts as IEnumerable<InsuranceAgency.Domain.Entities.Contract>;
+    var payments = ViewBag.Payments as IEnumerable<InsuranceAgency.Domain.Entities.Payment>;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2>📊 История операций</h2>
+        <p class="text-muted mb-0">Просмотр всех ваших договоров и платежей. Здесь вы можете оплатить неоплаченные договоры</p>
+    </div>
+    <a href="@Url.Action("Index", "Dashboard")" class="btn btn-outline-secondary">← Назад в кабинет</a>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">📄 Мои договоры страхования</h5>
+            </div>
+            <div class="card-body">
+                @if (contracts != null && contracts.Any())
+                {
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Номер договора</th>
+                                    <th>Услуга страхования</th>
+                                    <th>Период действия</th>
+                                    <th>Страховая премия</th>
+                                    <th>Статус</th>
+                                    <th>Оплата</th>
+                                    <th class="text-center">Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var contract in contracts)
+                                {
+                                    <tr>
+                                        <td>
+                                            @if (string.IsNullOrWhiteSpace(contract.Number))
+                                            {
+                                                <span class="text-muted">Не присвоен</span>
+                                            }
+                                            else
+                                            {
+                                                <strong>@contract.Number</strong>
+                                            }
+                                        </td>
+                                        <td>@(contract.Service?.Name ?? "<span class='text-muted'>Услуга не найдена</span>")</td>
+                                        <td>@contract.StartDate.ToString("dd.MM.yyyy") - @contract.EndDate.ToString("dd.MM.yyyy")</td>
+                                        <td><span class="badge bg-success">@contract.Premium.Amount.ToString("N2") @contract.Premium.Currency</span></td>
+                                        <td>
+                                            @{
+                                                var statusClass = contract.Status switch
+                                                {
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Registered => "bg-info",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.PendingPayment => "bg-warning",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Paid => "bg-primary",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Active => "bg-success",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Overdue => "bg-danger",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Suspended => "bg-warning",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Cancelled => "bg-dark",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Problematic => "bg-danger",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Expired => "bg-secondary",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Completed => "bg-success",
+                                                    _ => "bg-secondary"
+                                                };
+                                                var statusText = contract.Status switch
+                                                {
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Registered => "Зарегистрирован",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.PendingPayment => "Ожидание оплаты",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Paid => "Оплачен",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Active => "Активен",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Overdue => "Просрочен",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Suspended => "Приостановлен",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Cancelled => "Отменён",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Problematic => "Проблемный",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Expired => "Истёк срок",
+                                                    InsuranceAgency.Domain.Enums.ContractStatus.Completed => "Завершён",
+                                                    _ => "Неизвестно"
+                                                };
+                                            }
+                                            <span class="badge @statusClass">@statusText</span>
+                                        </td>
+                                        <td>
+                                            @if (contract.IsPaid)
+                                            {
+                                                <span class="badge bg-success">✅ Оплачен</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-warning">⏳ Не оплачен</span>
+                                            }
+                                        </td>
+                                        <td class="text-center">
+                                            @if (!contract.IsPaid && contract.Status == InsuranceAgency.Domain.Enums.ContractStatus.Registered)
+                                            {
+                                                <a href="@Url.Action("PayContract", "Client", new { contractId = contract.Id })" class="btn btn-sm btn-success" title="Оплатить договор">
+                                                    💳 Оплатить
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">-</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info">
+                        <p class="mb-0">📋 У вас пока нет договоров страхования. <a href="@Url.Action("CreateApplication", "Client")">Создайте заявку на договор</a></p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0">💳 История платежей</h5>
+    </div>
+    <div class="card-body">
+        @if (payments != null && payments.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Сумма платежа</th>
+                            <th>Валюта</th>
+                            <th>Статус</th>
+                            <th>Дата и время</th>
+                            <th>ID транзакции</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var payment in payments)
+                        {
+                            <tr>
+                                <td><strong>@payment.Amount.ToString("N2")</strong></td>
+                                <td>@payment.Currency</td>
+                                <td>
+                                    @if (payment.Status == InsuranceAgency.Domain.Enums.PaymentStatus.Confirmed)
+                                    {
+                                        <span class="badge bg-success">✅ Подтвержден</span>
+                                    }
+                                    else if (payment.Status == InsuranceAgency.Domain.Enums.PaymentStatus.Failed)
+                                    {
+                                        <span class="badge bg-danger">❌ Ошибка</span>
+                                    }
+                                    else if (payment.Status == InsuranceAgency.Domain.Enums.PaymentStatus.Processing)
+                                    {
+                                        <span class="badge bg-warning">⏳ В обработке</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">Неизвестно</span>
+                                    }
+                                </td>
+                                <td>@payment.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td>
+                                <td><code>@(payment.PspTransactionId ?? "Не указан")</code></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info">
+                <p class="mb-0">💳 Платежей пока нет. После оплаты договоров они появятся здесь</p>
+            </div>
+        }
+    </div>
+</div>
+

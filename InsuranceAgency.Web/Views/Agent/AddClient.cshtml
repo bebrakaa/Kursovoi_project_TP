@@ -1,0 +1,61 @@
+@model InsuranceAgency.Application.DTOs.Client.CreateClientDto
+@{
+    ViewData["Title"] = "Добавить клиента";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2>➕ Добавить клиента</h2>
+        <p class="text-muted mb-0">Заполните форму для добавления нового клиента в справочник. Все поля обязательны для заполнения</p>
+    </div>
+    <a href="@Url.Action("Clients", "Agent")" class="btn btn-outline-secondary">← Назад к списку</a>
+</div>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<form method="post" asp-antiforgery="true" class="mt-4">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="FullName" class="form-label"></label>
+            <input asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="Phone" class="form-label"></label>
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label asp-for="Passport" class="form-label"></label>
+            <input asp-for="Passport" class="form-control" />
+            <span asp-validation-for="Passport" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Добавить клиента</button>
+        <a href="@Url.Action("Clients", "Agent")" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

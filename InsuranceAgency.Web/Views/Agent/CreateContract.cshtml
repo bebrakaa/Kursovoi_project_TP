@@ -1,0 +1,109 @@
+@model InsuranceAgency.Application.DTOs.Contract.CreateContractFormDto
+@{
+    ViewData["Title"] = "Создать договор страхования";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var clients = ViewBag.Clients as IEnumerable<InsuranceAgency.Domain.Entities.Client>;
+    var services = ViewBag.Services as IEnumerable<InsuranceAgency.Domain.Entities.InsuranceService>;
+    var agents = ViewBag.Agents as IEnumerable<InsuranceAgency.Domain.Entities.Agent>;
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<form method="post" asp-antiforgery="true" class="mt-4">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="ClientId" class="form-label"></label>
+            <select asp-for="ClientId" class="form-select">
+                <option value="">Выберите клиента</option>
+                @foreach (var client in clients ?? Enumerable.Empty<InsuranceAgency.Domain.Entities.Client>())
+                {
+                    <option value="@client.Id">@client.FullName (@client.Email)</option>
+                }
+            </select>
+            <span asp-validation-for="ClientId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label asp-for="ServiceId" class="form-label"></label>
+            <select asp-for="ServiceId" class="form-select">
+                <option value="">Выберите услугу</option>
+                @foreach (var service in services ?? Enumerable.Empty<InsuranceAgency.Domain.Entities.InsuranceService>())
+                {
+                    <option value="@service.Id">@service.Name</option>
+                }
+            </select>
+            <span asp-validation-for="ServiceId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="AgentId" class="form-label"></label>
+            <select asp-for="AgentId" class="form-select">
+                <option value="">Выберите агента</option>
+                @foreach (var agent in agents ?? Enumerable.Empty<InsuranceAgency.Domain.Entities.Agent>())
+                {
+                    <option value="@agent.Id">@agent.FullName</option>
+                }
+            </select>
+            <span asp-validation-for="AgentId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label asp-for="PremiumAmount" class="form-label"></label>
+            <input asp-for="PremiumAmount" class="form-control" step="0.01" />
+            <span asp-validation-for="PremiumAmount" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="StartDate" class="form-label"></label>
+            <input asp-for="StartDate" class="form-control" type="date" />
+            <span asp-validation-for="StartDate" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label asp-for="EndDate" class="form-label"></label>
+            <input asp-for="EndDate" class="form-control" type="date" />
+            <span asp-validation-for="EndDate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Notes" class="form-label"></label>
+        <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="Notes" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Создать договор</button>
+        <a href="@Url.Action("Contracts", "Agent")" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const startDateInput = document.querySelector('input[name="StartDate"]');
+        const endDateInput = document.querySelector('input[name="EndDate"]');
+        
+        if (startDateInput && endDateInput) {
+            // Устанавливаем минимальную дату на сегодня
+            const today = new Date().toISOString().split('T')[0];
+            startDateInput.min = today;
+            endDateInput.min = today;
+            
+            // При изменении даты начала, обновляем минимальную дату окончания
+            startDateInput.addEventListener('change', function() {
+                endDateInput.min = this.value;
+            });
+        }
+    });
+    </script>
+}
+
